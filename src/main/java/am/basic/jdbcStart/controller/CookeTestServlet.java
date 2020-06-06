@@ -21,8 +21,6 @@ public class CookeTestServlet extends HttpServlet {
                 System.out.println(cookie.getName() + " : " + cookie.getValue());
             }
         }
-
-
         Cookie cookie = new Cookie("test","fsdgsdgdfgdfgdfgdf");
         cookie.setMaxAge(10);
         response.addCookie(cookie);

@@ -26,9 +26,7 @@ public class ResendCodeServlet extends HttpServlet {
         String username = request.getParameter(USERNAME_PARAM_KEY);
 
         try {
-
             InvalidParametersException.check(username == null || username.length() < 5, USERNAME_INVALID_MESSAGE);
-
             userService.sendCode(username);
             request.setAttribute(USERNAME_PARAM_KEY, username);
             request.setAttribute(MESSAGE_ATTRIBUTE_KEY, CODE_SUCCESSFULLY_SEND_MESSAGE);

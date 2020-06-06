@@ -11,12 +11,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class Encryptor {
 
-
     private static String keyStr = "abrdhelunaajdkwg";
-
     private static Key aesKey = null;
     private static Cipher cipher = null;
-
 
     static {
 

@@ -26,7 +26,6 @@ public class DebugFilter implements Filter {
         System.out.println("Authorization filter constructed");
     }
 
-
     private void printRequest(HttpServletRequest request) {
         Map<String, String> map = new HashMap<String, String>();
         Enumeration headerNames = request.getHeaderNames();

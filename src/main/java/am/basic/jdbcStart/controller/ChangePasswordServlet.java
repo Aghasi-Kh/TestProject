@@ -27,9 +27,7 @@ public class ChangePasswordServlet extends HttpServlet {
         String password = request.getParameter(PASSWORD_PARAM_KEY);
         String newPassword = request.getParameter(NEW_PASSWORD_PARAM_KEY);
 
-
         try {
-
             User sessionUser = (User) request.getSession().getAttribute(USER_ATTRIBUTE_KEY);
             UnauthorizedException.check(sessionUser == null, SESSION_EXPIRED_MESSAGE);
 
@@ -41,7 +39,6 @@ public class ChangePasswordServlet extends HttpServlet {
             request.setAttribute(USER_ATTRIBUTE_KEY, user);
             request.setAttribute(MESSAGE_ATTRIBUTE_KEY, PASSWORD_CHANGE_SUCCESS_MESSAGE);
             request.getRequestDispatcher(HOME_PAGE).forward(request, response);
-
 
         } catch (UnauthorizedException e) {
             request.setAttribute(MESSAGE_ATTRIBUTE_KEY, e.getMessage());

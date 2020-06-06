@@ -29,14 +29,9 @@ public class VerificationServlet extends HttpServlet {
         String code = request.getParameter(CODE_PARAM_KEY);
 
         try {
-
-
             InvalidParametersException.check(code == null || code.length() != 5, CODE_INVALID_MESSAGE);
             InvalidParametersException.check(username == null || username.length() < 5, USERNAME_INVALID_MESSAGE);
-
-
             userService.verify(username, code);
-
             request.setAttribute(MESSAGE_ATTRIBUTE_KEY, VERIFICATION_SUCCESS_MESSAGE);
             request.getRequestDispatcher(INDEX_PAGE).forward(request, response);
 

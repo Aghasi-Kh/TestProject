@@ -27,15 +27,12 @@ public class RegisterServlet extends HttpServlet {
         String username = request.getParameter(USERNAME_PARAM_KEY);
         String password = request.getParameter(PASSWORD_PARAM_KEY);
 
-
         try {
-
             User user = new User();
             user.setUsername(username);
             user.setPassword(password);
             user.setName(name);
             user.setSurname(surname);
-
             userService.register(user);
             request.setAttribute(USERNAME_PARAM_KEY, username);
             request.setAttribute(MESSAGE_ATTRIBUTE_KEY, REGISTRATION_SUCCESS_MESSAGE);

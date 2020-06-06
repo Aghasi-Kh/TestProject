@@ -29,15 +29,10 @@ public class RecoverPassword extends HttpServlet {
         String code = request.getParameter(CODE_PARAM_KEY);
 
         try {
-
-
             InvalidParametersException.check(code == null || code.length() != 5, CODE_INVALID_MESSAGE);
             InvalidParametersException.check(username == null || username.length() < 5, USERNAME_INVALID_MESSAGE);
             InvalidParametersException.check(PasswordValidator.isInvalid(password), PASSWORD_INVALID_MESSAGE);
-
-
             userService.recoverPassword(username, code, password);
-
             request.setAttribute(MESSAGE_ATTRIBUTE_KEY, PASSWORD_CHANGE_SUCCESS_MESSAGE);
             request.getRequestDispatcher(INDEX_PAGE).forward(request, response);
 

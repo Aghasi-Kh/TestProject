@@ -6,7 +6,6 @@ public class UnauthorizedException extends Exception {
         super(message);
     }
 
-
     public static void check(boolean expresion, String message) throws UnauthorizedException {
         if (expresion) {
             throw new UnauthorizedException(message);

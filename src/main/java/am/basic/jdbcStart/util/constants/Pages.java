@@ -2,7 +2,6 @@ package am.basic.jdbcStart.util.constants;
 
 public interface Pages {
 
-
     String HOME_PAGE = "/secure/home.jsp";
 
     String INDEX_PAGE = "/index.jsp";

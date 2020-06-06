@@ -25,9 +25,7 @@ public class ForgetPasswordServlet extends HttpServlet {
         String username = request.getParameter(USERNAME_PARAM_KEY);
 
         try {
-
             InvalidParametersException.check(username == null || username.length() < 5, USERNAME_INVALID_MESSAGE);
-
             userService.sendCode(username);
             request.setAttribute(USERNAME_PARAM_KEY,username);
             request.getRequestDispatcher(RECOVER_PASSWORD_PAGE).forward(request,response);

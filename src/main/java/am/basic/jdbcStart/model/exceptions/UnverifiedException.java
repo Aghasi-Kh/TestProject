@@ -6,7 +6,6 @@ public class UnverifiedException extends Exception{
         super(message);
     }
 
-
     public static void check(boolean expresion, String message) throws UnverifiedException {
         if (expresion) {
             throw new UnverifiedException(message);

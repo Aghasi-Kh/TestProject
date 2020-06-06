@@ -13,9 +13,7 @@ import static am.basic.jdbcStart.util.constants.Messages.*;
 
 public class UserService {
 
-
     private UserRepository userRepository = new UserRepository(new DataSource());
-
 
     public void register(User user) throws DuplicateDataException, InternalServerException {
 
@@ -30,11 +28,7 @@ public class UserService {
             e.printStackTrace();
             throw new InternalServerException(INTERNAL_ERROR_MESSAGE);
         }
-
-
-
     }
-
 
     public User login(String username, String password) throws InternalServerException, NotFoundException, UnverifiedException {
         try {

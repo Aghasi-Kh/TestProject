@@ -19,7 +19,6 @@ public class CookieUtil {
         return null;
     }
 
-
     public static void removeCookie(HttpServletRequest request, HttpServletResponse response, String name) {
         Cookie cookie = getByName(request, name);
         if (cookie != null) {

@@ -6,7 +6,6 @@ public class AccessDeniedException extends Exception {
         super(message);
     }
 
-
     public static void check(boolean expresion, String message) throws AccessDeniedException {
         if (expresion) {
             throw new AccessDeniedException(message);

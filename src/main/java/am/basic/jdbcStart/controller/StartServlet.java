@@ -24,7 +24,6 @@ public class StartServlet extends HttpServlet {
 
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
         Cookie rememberMeCookie = CookieUtil.getByName(request, REMEMBER_TOKEN_COOKIE_KEY);
         if (rememberMeCookie == null) {
             response.sendRedirect(INDEX_PAGE);
@@ -41,14 +40,11 @@ public class StartServlet extends HttpServlet {
         String password = token.split(":")[1];
 
         try {
-
-
             User user = userService.login(username, password);
             HttpSession session = request.getSession();
             session.setAttribute(USER_ATTRIBUTE_KEY, user);
             rememberMeCookie.setMaxAge(360000);
             response.sendRedirect(HOME_PAGE);
-
 
         } catch (UnverifiedException e) {
             request.setAttribute(MESSAGE_ATTRIBUTE_KEY, e.getMessage());

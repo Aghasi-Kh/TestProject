@@ -24,7 +24,6 @@ public class StudentRepository {
         preparedStatement.setString(2, student.getSurname());
         preparedStatement.setInt(3, student.getBalance());
         preparedStatement.setInt(4, student.getId());
-
         int result = preparedStatement.executeUpdate();
         System.out.println("result = " + result);
     }

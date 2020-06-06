@@ -32,10 +32,7 @@ public class AuthorizationFilter implements Filter {
         }else {
             chain.doFilter(request,response);
         }
-
-
     }
-
 
     @Override
     public void destroy() {

@@ -30,7 +30,6 @@ public class LoginServlet extends HttpServlet {
         String rememberMe = request.getParameter(REMEMBER_ME_PARAM_KEY);
 
         try {
-
             InvalidParametersException.check(username == null || username.length() < 5, USERNAME_INVALID_MESSAGE);
             InvalidParametersException.check(PasswordValidator.isInvalid(password), PASSWORD_INVALID_MESSAGE);
 
