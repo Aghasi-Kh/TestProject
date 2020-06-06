@@ -13,6 +13,7 @@ public class HomeJspServletSample extends HttpServlet {
 
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
         response.getWriter().println("<html>\n" +
                 "<head>\n" +
                 "    <title>Title</title>\n" +
