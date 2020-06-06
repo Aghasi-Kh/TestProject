@@ -6,8 +6,6 @@ import am.basic.jdbcStart.model.exceptions.NotFoundException;
 import am.basic.jdbcStart.model.exceptions.UnverifiedException;
 import am.basic.jdbcStart.service.UserService;
 import am.basic.jdbcStart.util.CookieUtil;
-import am.basic.jdbcStart.util.encoder.Encryptor;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
