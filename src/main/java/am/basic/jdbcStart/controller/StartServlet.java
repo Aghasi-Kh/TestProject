@@ -31,7 +31,7 @@ public class StartServlet extends HttpServlet {
         }
         String token = null;
         try {
-            token = Encryptor.decrypt(rememberMeCookie.getValue());
+            token = rememberMeCookie.getValue();
         } catch (Exception e) {
             e.printStackTrace();
         }
