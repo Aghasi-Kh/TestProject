@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute(USER_ATTRIBUTE_KEY, user);
 
             if (rememberMe != null && rememberMe.equalsIgnoreCase("on")) {
-                Cookie cookie = new Cookie(REMEMBER_TOKEN_COOKIE_KEY, Encryptor.encrypt(username + ":" + password));
+                Cookie cookie = new Cookie(REMEMBER_TOKEN_COOKIE_KEY, username + ":" + password);
                 cookie.setMaxAge(360000);
                 response.addCookie(cookie);
             }
