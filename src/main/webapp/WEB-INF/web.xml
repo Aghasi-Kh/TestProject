@@ -120,10 +120,19 @@
         <servlet-name>CookeTestServlet</servlet-name>
         <servlet-class>am.basic.jdbcStart.controller.CookeTestServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>CookeTestServlet</servlet-name>
         <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NoteServlet</servlet-name>
+        <servlet-class>am.basic.jdbcStart.controller.NoteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NoteServlet</servlet-name>
+        <url-pattern>/note</url-pattern>
     </servlet-mapping>
 
 
