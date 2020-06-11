@@ -22,6 +22,10 @@ public class CookeTestServlet extends HttpServlet {
 
 
 
+
+
+
+
         Cookie[] cookies = request.getCookies();
         if (cookies != null && cookies.length > 0) {
             for (Cookie cookie : cookies) {
