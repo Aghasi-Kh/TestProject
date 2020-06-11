@@ -15,6 +15,9 @@ public class CookeTestServlet extends HttpServlet {
 
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        // Test for Aghas
+
+
         Cookie[] cookies = request.getCookies();
         if (cookies != null && cookies.length > 0) {
             for (Cookie cookie : cookies) {
